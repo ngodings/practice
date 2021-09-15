@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:practice/auth/auth_screen.dart';
+import 'package:practice/constants.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+        fontFamily: 'Circular',
+        primarySwatch: Colors.blue,
+        inputDecorationTheme: InputDecorationTheme(
+            filled: true,
+            fillColor: Colors.white38,
+            border: InputBorder.none,
+            hintStyle: TextStyle(color: Colors.white),
+            contentPadding: EdgeInsets.symmetric(
+                vertical: defaultPadding * 1.2, horizontal: defaultPadding))),
+    home: AuthScreen(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
