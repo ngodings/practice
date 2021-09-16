@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice/auth/auth_screen.dart';
 import 'package:practice/constants.dart';
+import 'package:practice/screen/create_page.dart';
+import 'package:practice/screen/home_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,8 +17,22 @@ void main() {
             hintStyle: TextStyle(color: Colors.white),
             contentPadding: EdgeInsets.symmetric(
                 vertical: defaultPadding * 1.2, horizontal: defaultPadding))),
-    home: AuthScreen(),
+    home: HomePage(),
   ));
+}
+
+class Apps extends StatelessWidget {
+  const Apps({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('User Info'),
+      ),
+      body: CreateUser(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
